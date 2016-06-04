@@ -51,3 +51,11 @@ ballRadiusRange: [min, max]
 - ballSpeedRange: range of balls velocity (x and y vectors)
   - type: Number
   - example: `ballSpeedRange: 0.4 //range: random number between -0.4 and 0.4`
+
+### Build ###
+```
+npm install requirejs -g
+r.js -o build.js
+```
+
+  
