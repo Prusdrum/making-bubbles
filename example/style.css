@@ -20,3 +20,14 @@
     text-align: center;
     font-family: 'After Screen', Helvetica, sans-serif;
 }
+
+a button {
+    margin-top: 5px;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+a button:hover {
+    background-color: lightgray;
+}

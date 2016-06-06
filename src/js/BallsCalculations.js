@@ -32,22 +32,24 @@ define('BallsCalculations', [], function(){
     }
     
     Calcs.prototype.hasToBounce = function(){
-        var dxVel = this._b2.vel.x - this._b1.vel.x;
-        var dyVel = this._b2.vel.y - this._b1.vel.y;
-        var velIndicator = this.dx * dxVel + this.dy * dyVel;
+        var dxVel = this._b2.vel.x - this._b1.vel.x,
+            dyVel = this._b2.vel.y - this._b1.vel.y,
+            velIndicator = this.dx * dxVel + this.dy * dyVel;
+        
         //prevent sticking
         return velIndicator < 0;
     }
     
     Calcs.prototype.bounce = function(weighted){
-        var b1 = this._b1;
-        var b2 = this._b2;
         weighted = weighted || false;
         
-        var b1X = b1.vel.x;
-        var b1Y = b1.vel.y;
-        var b2X = b2.vel.x;
-        var b2Y = b2.vel.y;
+        var b1 = this._b1,
+            b2 = this._b2;
+        
+        var b1X = b1.vel.x,
+            b1Y = b1.vel.y,
+            b2X = b2.vel.x,
+            b2Y = b2.vel.y;
         
         var newB1X, newB1Y, newB2X, newB2Y;
         

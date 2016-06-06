@@ -36,6 +36,7 @@ mb.stop();
   - example: `lineColor: '#B26284'`
 - ballsCount:
   - type: Number
+  - max: 500
   - example: `ballsCount: 30`
 - ballRadiusRange:
   - type: Array

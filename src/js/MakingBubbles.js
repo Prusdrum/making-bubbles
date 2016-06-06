@@ -4,6 +4,10 @@ define('MakingBubbles', ['Ball', 'utils', 'BallsCalculations'], function(Ball, u
         if (!(this instanceof MakingBubbles)){
             return new MakingBubbles(dom, config);
         }
+        
+        if (config.ballsCount > 500)
+            throw new Error('to many bubbles');
+        
         //config
         this.ballColor = config.ballColor || '#B26284';
         this.backgroundColor = config.backgroundColor || '#212321';
@@ -20,7 +24,6 @@ define('MakingBubbles', ['Ball', 'utils', 'BallsCalculations'], function(Ball, u
         this._canvas = document.createElement('canvas');
         this._ctx = this._canvas.getContext("2d");
         this.parent = dom;
-        
         dom.appendChild(this._canvas);        
         _updateCanvas.call(this);
 
@@ -113,7 +116,7 @@ define('MakingBubbles', ['Ball', 'utils', 'BallsCalculations'], function(Ball, u
             }
         });
         
-        //dodatkowa pętla aby linie nie przykrywały kulek
+        //additional loop because lines covers balls
         balls.forEach(function(ball){
             ball.draw(ctx, canvas);
         })
