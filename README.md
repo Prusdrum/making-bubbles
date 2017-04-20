@@ -1,5 +1,8 @@
 # making-bubbles 
 
+## Demo:
+http://prusdrum.github.io/making-bubbles/example/ 
+
 ## Usage:
 1. Add minified file to index.html from dist : `<script src="making-bubbles.min.js"></script>`
 2. Add Module using AMD: 
